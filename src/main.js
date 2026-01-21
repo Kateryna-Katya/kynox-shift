@@ -87,5 +87,11 @@ function initThreeJS() {
 }
 
 // Avvia Three.js quando il DOM è pronto
-document.addEventListener('DOMContentLoaded', initThreeJS);
+    document.addEventListener('DOMContentLoaded', initThreeJS);
+    // Внутри document.addEventListener('DOMContentLoaded', () => { ...
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 50
+});
 });

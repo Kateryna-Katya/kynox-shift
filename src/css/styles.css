@@ -354,3 +354,245 @@ h4,
         height: 400px;
     }
 }
+/* --- SECTION: PLATFORM & TICKER --- */
+.platform {
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* Бегущая строка */
+.ticker {
+    background: var(--primary-color);
+    border-top: var(--border-width) solid #000;
+    border-bottom: var(--border-width) solid #000;
+    padding: 1rem 0;
+    overflow: hidden;
+    margin-bottom: 6rem;
+    transform: rotate(-1deg);
+    /* Легкий наклон для брутализма */
+    width: 110%;
+    margin-left: -5%;
+}
+
+.ticker__wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker__wrapper span {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000;
+    padding-right: 2rem;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Сетка контента */
+.platform__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-color);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Карточки */
+.platform__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.p-card {
+    background: #111;
+    border: var(--border-width) solid var(--text-color);
+    padding: 2.5rem;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 8px 8px 0px var(--accent-color);
+}
+
+.p-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--primary-color);
+}
+
+.p-card__icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    margin-bottom: 1.5rem;
+}
+
+.p-card__title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.p-card__text {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .platform__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+/* --- SECTION: BENEFITS --- */
+.benefits {
+    padding: 8rem 0;
+    background: var(--bg-color);
+}
+
+.benefits__header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.benefit-item {
+    position: relative;
+    background: #1a1a1a;
+    border: var(--border-width) solid var(--text-color);
+    padding: 3rem;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.benefit-item:hover {
+    transform: scale(1.02) rotate(1deg);
+    border-color: var(--primary-color);
+}
+
+.benefit-item--alt {
+    background: var(--text-color);
+    color: #000;
+}
+
+.benefit-item--alt .benefit-item__num {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item--alt .benefit-item__text {
+    color: #333;
+}
+
+/* Numeri Giganti */
+.benefit-item__num {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.benefit-item__content {
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-item__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.benefit-item__text {
+    font-size: 1rem;
+    color: #aaa;
+    max-width: 80%;
+}
+
+/* Sticker & Icone */
+.benefit-item__sticker {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    transform: rotate(15deg);
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.benefit-item__tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: #000;
+    padding: 0.2rem 0.8rem;
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+.benefit-item__icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .benefits__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item__num {
+        font-size: 6rem;
+    }
+}
