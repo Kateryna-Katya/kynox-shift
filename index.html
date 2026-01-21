@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/kynox-shift/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kynox Shift | Evoluzione Digitale</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/kynox-shift/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/kynox-shift/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/kynox-shift/assets/styles-CUZ44pU4.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="holographic-bg"></div>
+    <header class="header" id="header">
+  <nav class="container nav">
+    <a href="/" class="logo">
+      KYNOX<span>SHIFT</span>
+    </a>
 
+    <ul class="nav__menu">
+      <li><a href="#home" class="nav__link">Home</a></li>
+      <li><a href="#corsi" class="nav__link">Corsi</a></li>
+      <li><a href="#innovazione" class="nav__link">Innovazione</a></li>
+      <li><a href="#metodologia" class="nav__link">Metodologia</a></li>
+      <li><a href="#blog" class="nav__link">Blog</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn--primary">
+      Contattaci
+      <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </nav>
+</header>
 
     <main>
       <!-- Loads the specified .html file -->
@@ -36,21 +49,58 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="/" class="logo logo--footer">KYNOX<span>SHIFT</span></a>
+      <p class="footer__text">Tecnologie di nuova generazione per i leader del domani. Costruisci la tua carriera nel
+        mercato UE.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Navigazione</h4>
+      <ul class="footer__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#corsi">Corsi</a></li>
+        <li><a href="#innovazione">Innovazione</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Legale</h4>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="terms.html">Termini e Condizioni</a></li>
+        <li><a href="return.html">Politica di Reso</a></li>
+        <li><a href="personal-data-policy.html">Dati Personali</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Contatti</h4>
+      <ul class="footer__contact">
+        <li>
+          <i data-lucide="phone"></i>
+          <span>+39 02 345 6789</span>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <span>hello@kynox-shift.blog</span>
+        </li>
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>Via della Moscova, 18, 20121 Milano (MI), Italia</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Kynox Shift. Tutti i diritti riservati.</p>
   </div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
   </body>
 </html>
