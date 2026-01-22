@@ -473,7 +473,7 @@ h4,
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.0rem;
     }
 }
 /* --- SECTION: BENEFITS --- */
@@ -1168,4 +1168,25 @@ body.no-scroll {
     .pages h1 {
         font-size: 2.2rem;
     }
+}
+/* Убеждаемся, что изображение заполняет контейнер и не искажается */
+#three-canvas-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезает лишнее, сохраняя пропорции */
+  display: block; /* Убирает возможные отступы снизу */
+  border-radius: inherit; /* Если у brutalist-frame есть скругление, изображение его унаследует */
+}
+
+/* Опционально: если контейнер "схлопнулся" по высоте,
+ нужно задать ему явную высоту.
+ Если высота уже задана в вашем CSS для .hero__visual или .brutalist-frame,
+ этот блок можно пропустить. */
+.hero__visual {
+  min-height: 400px; /* Примерная высота, настройте под ваш дизайн */
+  display: flex;
+}
+#three-canvas-container {
+  width: 100%;
+  /* height: 100%; или конкретная высота */
 }
